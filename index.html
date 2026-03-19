@@ -25,10 +25,10 @@ html{scroll-behavior:smooth;cursor:none}
 body{font-family:'DM Sans',sans-serif;background:var(--ink);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 #cursor{position:fixed;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transition:transform 0.15s ease;transform:translate(-50%,-50%)}
 #cursor-ring{position:fixed;width:36px;height:36px;border:1px solid rgba(201,168,76,0.5);border-radius:50%;pointer-events:none;z-index:9998;transition:all 0.08s ease;transform:translate(-50%,-50%)}
-nav{position:fixed;top:0;width:100%;z-index:500;padding:0 64px;height:72px;display:flex;align-items:center;justify-content:space-between;transition:all 0.5s ease}
+nav{position:fixed;top:0;width:100%;z-index:500;padding:0 64px;height:80px;display:flex;align-items:center;justify-content:space-between;transition:all 0.5s ease}
 nav.scrolled{background:rgba(4,8,15,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--gold-line)}
 .nav-brand{display:flex;align-items:center;gap:14px}
-.nav-logo-img{width:36px;height:36px;object-fit:contain;mix-blend-mode:screen;filter:brightness(1.1)}
+.nav-logo-img{width:46px;height:46px;object-fit:contain;mix-blend-mode:screen;filter:brightness(1.1)}
 .nav-wordmark{font-family:'Cormorant Garamond',serif;font-size:17px;letter-spacing:4px;color:var(--gold);font-weight:600}
 .nav-links{display:flex;gap:48px;list-style:none}
 .nav-links a{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted2);text-decoration:none;transition:color 0.3s;font-weight:300}
@@ -42,7 +42,7 @@ canvas#particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0
 .hero-eyebrow{display:inline-flex;align-items:center;gap:16px;margin-bottom:44px;opacity:0;animation:fadeUp 1s ease 0.3s forwards}
 .eyebrow-line{width:40px;height:1px;background:var(--gold)}
 .hero-eyebrow span{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:300}
-.hero-seal{width:140px;height:140px;object-fit:contain;mix-blend-mode:screen;filter:brightness(1.05) drop-shadow(0 0 50px rgba(201,168,76,0.25));margin-bottom:28px;;margin-bottom:44px;opacity:0;animation:sealIn 1.6s ease 0.5s forwards}
+.hero-seal{width:150px;height:150px;object-fit:contain;mix-blend-mode:screen;filter:brightness(1.05) drop-shadow(0 0 50px rgba(201,168,76,0.25));margin-bottom:44px;opacity:0;animation:sealIn 1.6s ease 0.5s forwards}
 @keyframes sealIn{from{opacity:0;transform:scale(0.75) rotate(-8deg)}to{opacity:1;transform:scale(1) rotate(0deg)}}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6vw,82px);line-height:1.05;font-weight:300;margin-bottom:28px}
 .hero-title .l1{display:block;color:var(--white);opacity:0;animation:fadeUp 1s ease 0.8s forwards}
@@ -53,11 +53,9 @@ canvas#particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0
 .btn-gold{display:inline-block;padding:18px 44px;background:var(--gold);color:var(--ink);font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:500;text-decoration:none;transition:all 0.4s;font-family:'DM Sans',sans-serif;position:relative;overflow:hidden}
 .btn-gold::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,0);transition:background 0.3s}
 .btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 20px 40px rgba(201,168,76,0.2)}
-.btn-ghost{display:inline-block;padding:17px 44px;border:1px solid rgba(255,255,255,0.15);color:var(--muted2);font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:300;text-decoration:none;transition:all 0.4s;font-family:'DM Sans',sans-serif}
+.btn-ghost{display:inline-block;padding:17px 44px;border:1px solid rgba(255,255,255,0.25);color:var(--white);font-size:10px;letter-spacing:3px;text-transform:uppercase;font-weight:300;text-decoration:none;transition:all 0.4s;font-family:'DM Sans',sans-serif}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
-.hero-scroll{display:none;position:absolute;bottom:40px;;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;z-index:2;opacity:0;animation:fadeIn 1s ease 2.2s forwards}
-.hero-scroll span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
-.scroll-bar{width:1px;height:50px;background:linear-gradient(180deg,var(--gold),transparent);animation:pulse 2s ease infinite}
+.hero-scroll{display:none}
 @keyframes pulse{0%,100%{opacity:0.3}50%{opacity:1}}
 .gold-divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .numbers{background:var(--navy)}
@@ -192,7 +190,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
   <div class="hero-content">
     <div class="hero-eyebrow">
       <span class="eyebrow-line"></span>
-      <span>Lahore, Pakistan</span>
+      <span>Est. 2025 — Lahore, Pakistan</span>
       <span class="eyebrow-line"></span>
     </div>
     <img src="2.png" alt="PFSVC Official Seal" class="hero-seal">
@@ -219,7 +217,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
   <div class="numbers-inner">
     <div class="num-item reveal"><span class="nval" data-target="4000000">0</span><span class="nlabel">Pakistani Freelancers</span></div>
     <div class="num-item reveal d1"><span class="nval" data-target="50">0</span><span class="nlabel">Founding Member Seats</span></div>
-    <div class="num-item reveal d2"><span class="nval" data-target="10">0</span><span class="nlabel">Years HR Experience</span></div>
+    <div class="num-item reveal d2"><span class="nval" data-target="6">0</span><span class="nlabel">Years HR Experience</span></div>
     <div class="num-item reveal d3"><span class="nval" data-target="3">0</span><span class="nlabel">Step Verification Process</span></div>
   </div>
 </div>
@@ -232,7 +230,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
       <span class="section-tag">Who We Are</span>
       <h2>The standard Pakistan's talent market has been <em>missing.</em></h2>
       <p>Pakistan has over <strong>4 million freelancers.</strong> International clients have no credible way to verify their skills. Employers get burned. Talented professionals get overlooked. The cycle keeps repeating.</p>
-      <p>PFSVC was built to break that cycle. We run structured skills assessments, document verification, and human interviews — then issue an official badge that stands up to scrutiny anywhere in the world.</p>
+      <p>PFSVC was built to break that cycle. We run structured skills assessments, document verification, and human interviews - then issue an official badge that stands up to scrutiny anywhere in the world.</p>
       <p>Founded by HR professionals. <strong>Built for the people doing the actual work.</strong></p>
       <a href="#process" class="btn-gold" style="margin-top:36px;display:inline-block">See How Verification Works</a>
     </div>
@@ -266,13 +264,13 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
       <div class="pnum">02</div>
       <div class="pline"></div>
       <h3>Document Verification</h3>
-      <p>Academic credentials, portfolio, and work history — all independently reviewed. We check what everyone else just assumes. Because assumptions have a cost.</p>
+      <p>Academic credentials, portfolio, and work history - all independently reviewed. We check what everyone else just assumes. Because assumptions have a cost.</p>
     </div>
     <div class="process-card reveal d2">
       <div class="pnum">03</div>
       <div class="pline"></div>
       <h3>Human Interview</h3>
-      <p>A structured 15-minute video interview with our verification panel. Because a real professional deserves a real conversation — not an algorithm.</p>
+      <p>A structured 15-minute video interview with our verification panel. Because a real professional deserves a real conversation - not an algorithm.</p>
     </div>
   </div>
 </section>
@@ -289,12 +287,12 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
       <div class="why-card reveal">
         <span class="wnum">001</span>
         <h3>Global Clients Demand Proof</h3>
-        <p>International clients hiring Pakistani talent need more than a polished portfolio. A verified PFSVC badge gives them the confidence to hire — and to pay what the work is actually worth.</p>
+        <p>International clients hiring Pakistani talent need more than a polished portfolio. A verified PFSVC badge gives them the confidence to hire - and to pay what the work is actually worth.</p>
       </div>
       <div class="why-card reveal d1">
         <span class="wnum">002</span>
         <h3>Verified Talent Commands More</h3>
-        <p>Professionals with credible third-party verification consistently win higher-value contracts on Upwork, Fiverr, and direct retainers. Your badge pays for itself — many times over.</p>
+        <p>Professionals with credible third-party verification consistently win higher-value contracts on Upwork, Fiverr, and direct retainers. Your badge pays for itself - many times over.</p>
       </div>
       <div class="why-card reveal d2">
         <span class="wnum">003</span>
@@ -322,7 +320,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
     <div class="mcard reveal d2">
       <div class="price-row">
         <span class="pcur">PKR</span>
-        <span class="pval">3,000</span>
+        <span class="pval">1,500</span>
         <span class="pper">Per Year — Founding Rate Only</span>
       </div>
       <ul class="mfeatures">
@@ -334,7 +332,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
         <li>Invitation to PFSVC verified professional community</li>
       </ul>
       <a href="https://forms.office.com/r/LWbYjJ79GW" target="_blank" class="btn-gold" style="width:100%;text-align:center;display:block">Apply Now — Founding Rate</a>
-      <p class="mnote">Regular rate from Month 3: PKR 8,000/year.<br>Lock in your founding rate before seats close.</p>
+      <p class="mnote">Regular rate from Month 3: PKR 5,000/year.<br>Lock in your founding rate before seats close.</p>
     </div>
   </div>
 </section>
@@ -353,7 +351,7 @@ footer{background:var(--ink);border-top:1px solid var(--gold-line);padding:52px 
     <div class="contact-left reveal">
       <span class="section-tag">Get In Touch</span>
       <h2>Questions about verification or membership?</h2>
-      <p>We're a small team and we respond personally. Whether you're a freelancer evaluating PFSVC or a founder looking to hire from our verified network — reach out directly.</p>
+      <p>We're a small team, and we respond personally. Whether you're a freelancer evaluating PFSVC or a founder looking to hire from our verified network, reach out directly.</p>
       <ul class="clist">
         <li><strong>Email</strong><span>pfsvc.pakistan@outlook.com</span></li>
         <li><strong>Working Hours</strong><span>Monday – Friday &nbsp;|&nbsp; 10:00 AM – 6:00 PM PKT</span></li>
